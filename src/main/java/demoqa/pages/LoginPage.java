@@ -18,7 +18,7 @@ public class LoginPage extends BasePage {
     WebElement userPassword;
 
     public LoginPage enterPersonalData(String user, String password) {
-        type(userName, user, 500);
+        type(userName, user, 600);
         type(userPassword, password);
         return this;
     }

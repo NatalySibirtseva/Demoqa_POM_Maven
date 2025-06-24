@@ -4,6 +4,7 @@ import demoqa.core.BasePage;
 import demoqa.pages.alertsFrameWindows.AlertsPage;
 import demoqa.pages.alertsFrameWindows.BrowserWindowsPage;
 import demoqa.pages.alertsFrameWindows.FramePage;
+import demoqa.pages.forms.PracticeFormPage;
 import demoqa.pages.interactions.DroppablePage;
 import demoqa.pages.widgets.MenuPage;
 import demoqa.pages.widgets.SelectMenuPage;
@@ -89,6 +90,14 @@ public class SidePanel extends BasePage {
 
     public DroppablePage selectDroppable() {
         click(droppable, 0, 300);
-        return new DroppablePage(driver,wait);
+        return new DroppablePage(driver, wait);
+    }
+
+    @FindBy(xpath = "//span[.='Practice Form']")
+    WebElement practiceForm;
+
+    public PracticeFormPage selectPracticeForm() {
+        click(practiceForm, 0, 200);
+        return new PracticeFormPage(driver, wait);
     }
 }
